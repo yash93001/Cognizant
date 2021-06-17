@@ -1,0 +1,14 @@
+<h3>Employee Details</h3>
+<p><b>Id:</b> {{employee.id}}</p>
+<p><b>Name:</b> {{employee.name}}</p>
+<p><b>Salary:</b> {{employee.salary}}</p>
+<p><b>Permanent:</b> {{employee.permanent}}</p>
+<p><b>Department Id:</b> {{employee.department.id}}</p>
+<p><b>Department Name:</b> {{employee.department.name}}</p>
+<p><b>Skills:</b></p>
+<b>Skill Id Skill name</b><br>
+    <ul>
+        <ol *ngFor="let val of employee.skills;">{{val.id}}  {{val.name}}</ol>
+    </ul>
+<p><b>Date Of Birth:</b> {{employee.dateOfBirth |  date: 'MM/dd/yyyy'}}
+</p>

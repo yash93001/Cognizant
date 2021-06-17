@@ -1,0 +1,8 @@
+<p>Simple Button Click event</p>
+<br>
+<input type="text" [(ngModel)]="displayValue" #name="ngModel" >
+<button (click) = "add()">Add</button>
+<br>
+<p>Quantity Selector</p>
+<button (click) = "decrease()"[disabled]="flag">-</button><input type="text" [(ngModel)]="value" #name="ngModel" /><button (click) = "increase()">+</button>
+

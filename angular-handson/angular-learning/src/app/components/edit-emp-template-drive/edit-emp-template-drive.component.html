@@ -1,0 +1,36 @@
+<div id="editwrapper">
+<h4>Edit Employee</h4>
+<form>
+    <label for="name"><b>Name</b></label><br>
+    <input type="text" name="name" [(ngModel)]="employee.name" required minlength="2" maxlength="10" />
+    <div id="error_display">
+    <div *ngIf="name.errors?.required">
+        Name is required.
+    </div>
+    <div *ngIf="name.errors?.minlength">
+        Name must be at least 4 characters long.
+      </div>
+    <div *ngIf="name.errors?.maxlength">
+        Name must be at least 4 characters long.
+    </div>
+    <br>
+    </div>
+    <label for="salary"><b>Salary</b></label><br>
+    <input type="number" name="salary" [(ngModel)]="employee.salary" #name="ngModel"/><br><br>
+    <label for="permanent"><b>Is Permanent or not?</b></label><br>
+    <input type="radio" name="affirmative" [(ngModel)]="employee.permanent" #name="ngModel" value="true" [checked]="employee.permanent"/>Yes 
+    <input type="radio" name="affirmative" [(ngModel)]="employee.permanent" #name="ngModel" value="false" [checked]="!employee.permanent"/>No 
+    <br><br><label for=""><b>Department </b></label>
+    <select [(ngModel)]="employee.department.id" (change)="employee.department.id = 1 ">
+        <option *ngFor="let department of departments;" [value]="department.id" [selected]="employee.department.id == department.id" >{{department.name}}</option>
+    </select>
+    <br><button type="submit">Save</button>
+</form>
+</div>
+<div class="block">
+
+    <strong>Employee Model</strong><br>
+    
+    <pre>{{employee | json }}</pre>
+    
+</div>

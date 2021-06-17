@@ -1,0 +1,29 @@
+
+h4{
+    font-weight:bolder;
+    display: inline;
+    margin-left: 1%;
+
+}
+hr{
+    margin-left: 1%;
+
+}
+
+.currentLink {
+    color: #640200;
+    background-color: #000000;
+ }
+body { font-family: Segoe UI, Arial
+
+} 
+a:visited { color: blue } 
+a { font-size: 12px;
+    padding-left: 1%;
+    text-decoration: none }
+
+     
+.active-link { border-bottom: Solid 2px blue}
+#content{
+    margin-left: 1%;
+}
